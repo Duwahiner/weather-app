@@ -1,0 +1,55 @@
+{
+  "name": "weather-app",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Una app para la visualizacion del tiempo actual.",
+  "dependencies": {
+    "@emotion/react": "^11.1.2",
+    "@emotion/server": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "emotion-server": "^11.0.0",
+    "next": "^10.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-scripts": "4.0.1",
+    "react-svg": "^11.2.3",
+    "rebass": "^4.0.7",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "standard --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "keywords": [],
+  "author": "duwahiner moreno cuesta",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
