@@ -8,6 +8,7 @@ export const ContentItem = styled(Flex)`
         solid 1px
         ${({ theme }) => theme.colors.border};
     box-sizing: border-box;
+    background-color: #fff;
 `
 export const Text = styled.span`
     font-family: ${({ fontFamily }) => !fontFamily ? 'RobotoRegular' : fontFamily};;

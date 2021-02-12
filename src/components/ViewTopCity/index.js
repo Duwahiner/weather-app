@@ -8,7 +8,6 @@ import { getIcon } from '../../config'
 const ViewTopCity = (props) => {
   const theme = useTheme()
   const { bogotaColombia } = useSelector(state => state.data)
-  console.log(bogotaColombia)
 
   return (
     <Container
