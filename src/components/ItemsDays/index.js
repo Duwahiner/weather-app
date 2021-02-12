@@ -19,13 +19,19 @@ const ItemsDays = ({
           <Flex flex='none' flexDirection='column'>
 
             <Box>
-              <Text fontFamily='RobotoBold' color={theme.colors.text} fontSize='13px'>
+              <Text
+                fontFamily='RobotoBold'
+                color={theme.colors.text} fontSize='13px'
+              >
                 {title}
               </Text>
             </Box>
 
             <Box mt='-5px'>
-              <Text fontFamily='Roboto' fontSize='10px' color={theme.colors.span}>
+              <Text
+                fontFamily='Roboto'
+                fontSize='10px' color={theme.colors.span}
+              >
                 {subTitle}
               </Text>
             </Box>
@@ -44,7 +50,10 @@ const ItemsDays = ({
           }}
         >
           <Box>
-            <Text fontFamily='RobotoBold' fontSize='13px' color={theme.colors.container}>
+            <Text
+              fontFamily='RobotoBold'
+              fontSize='13px' color={theme.colors.container}
+            >
               {degrees}
             </Text>
           </Box>

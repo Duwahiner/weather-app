@@ -16,8 +16,16 @@ const ItemsWeather = ({
   const theme = useTheme()
 
   return (
-    <ContentItem mb='15px' shadows={theme.colors.shadowsItem} flexDirection='column'>
-      <Flex width={1} justifyContent='space-between' alignItems='center'>
+    <ContentItem
+      mb='15px'
+      shadows={theme.colors.shadowsItem}
+      flexDirection='column'
+    >
+      <Flex
+        width={1}
+        justifyContent='space-between'
+        alignItems='center'
+      >
         <Flex
           width='80px'
           height='80px'
@@ -31,16 +39,27 @@ const ItemsWeather = ({
         >
           <Box width='50px'> <ReactSVG src={urlSvg} /> </Box>
         </Flex>
-        <Flex flex='auto' height='30px' alignItems='center' justifyContent='center'>
+        <Flex
+          flex='auto'
+          height='30px'
+          alignItems='center'
+          justifyContent='center'
+        >
           <Flex flex='none'>
             <Box mr='2px'>
-              <Text fontFamily='RobotoBold' color={theme.colors.colorText} fontSize='30px'>
+              <Text
+                fontFamily='RobotoBold'
+                color={theme.colors.colorText} fontSize='30px'
+              >
                 {degreeNumber}
               </Text>
             </Box>
 
             <Box mr='10px'>
-              <Text fontFamily='RobotoBold' color={theme.colors.secondary} fontSize='10px'>
+              <Text
+                fontFamily='RobotoBold'
+                color={theme.colors.secondary} fontSize='10px'
+              >
                 {degree}
               </Text>
             </Box>
@@ -54,12 +73,19 @@ const ItemsWeather = ({
               flex='none'
             >
               <Box ml='10px'>
-                <Text fontFamily='RobotoBold' fontSize='13px' color={theme.colors.colorText}>
+                <Text
+                  fontFamily='RobotoBold'
+                  fontSize='13px'
+                  color={theme.colors.colorText}
+                >
                   {name}
                 </Text>
               </Box>
               <Box ml='10px'>
-                <Text fontFamily='Roboto' fontSize='10px' color={theme.colors.span}>
+                <Text
+                  fontFamily='Roboto'
+                  fontSize='10px' color={theme.colors.span}
+                >
                   {subName}
                 </Text>
               </Box>
@@ -75,7 +101,11 @@ const ItemsWeather = ({
           alignItems='center'
           sx={{ borderRight: `solid 1px ${theme.colors.span}` }}
         >
-          <Text fontFamily='Roboto' fontSize='10px' color={theme.colors.span}>
+          <Text
+            fontFamily='Roboto'
+            fontSize='10px'
+            color={theme.colors.span}
+          >
             {textItem1}
           </Text>
         </Flex>
@@ -85,13 +115,22 @@ const ItemsWeather = ({
           alignItems='center'
           sx={{ borderRight: `solid 1px ${theme.colors.span}` }}
         >
-          <Text fontFamily='Roboto' fontSize='10px' color={theme.colors.span}>
+          <Text
+            fontFamily='Roboto'
+            fontSize='10px' color={theme.colors.span}
+          >
             {textItem2}
           </Text>
         </Flex>
 
-        <Flex flex='none' pl='10px' justifyContent='center' alignItems='center'>
-          <Text fontFamily='Roboto' fontSize='10px' color={theme.colors.span}>
+        <Flex
+          flex='none' pl='10px'
+          justifyContent='center' alignItems='center'
+        >
+          <Text
+            fontFamily='Roboto'
+            fontSize='10px' color={theme.colors.span}
+          >
             {textItem3}
           </Text>
         </Flex>

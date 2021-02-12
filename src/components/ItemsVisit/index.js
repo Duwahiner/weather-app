@@ -29,12 +29,20 @@ const ItemsVisit = ({
 
         <Flex flexDirection='column'>
           <Box>
-            <Text fontFamily='RobotoBold' color={theme.colors.containes} fontSize='12px'>
+            <Text
+              fontFamily='RobotoBold'
+              color={theme.colors.containes}
+              fontSize='12px'
+            >
               {title}
             </Text>
           </Box>
           <Box>
-            <Text fontFamily='RobotoBold' color={theme.colors.containes} fontSize='12px'>
+            <Text
+              fontFamily='RobotoBold'
+              color={theme.colors.containes}
+              fontSize='12px'
+            >
               {subTitle}
             </Text>
           </Box>

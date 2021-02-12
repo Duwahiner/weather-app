@@ -7,8 +7,15 @@ const ContentViewVisit = (props) => {
   const theme = useTheme()
 
   return (
-    <Container width={1} px={2} mb={2} flexDirection='column'>
-      <Flex width={1} justifyContent='center' mb={4}>
+    <Container
+      minWidth='260px'
+      maxWidth={['auto', '480px', '100%']}
+      width={1} px={2}
+      mb={[5, 5, 2]}
+      flexDirection='column'
+      height={['auto', 'auto', '350px']}
+    >
+      <Flex width={1} justifyContent='center' mb={[3, 4]}>
         <Box mr={1}>
           <Text
             fontFamily='RobotoBold'

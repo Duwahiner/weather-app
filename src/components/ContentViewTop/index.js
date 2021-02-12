@@ -8,7 +8,13 @@ const ContentViewTop = (props) => {
   const theme = useTheme()
 
   return (
-    <Container width={1} px={2} mb={2} flexDirection='column'>
+    <Container
+      minWidth='224px'
+      width={1} px={2}
+      mb={[5, 5, 2]}
+      flexDirection='column'
+      maxWidth={['auto', '480px', '100%']}
+    >
       <Flex width={1} justifyContent='space-between' mb={4} mt='5px'>
         <Flex>
           <Box mr='5px' width='9px'> <ReactSVG src='svg/s-10.svg' /> </Box>
@@ -49,7 +55,7 @@ const ContentViewTop = (props) => {
           title='Art Science'
           subTitle='Museum'
           backgroundImage='/image/fd-5.png'
-          height='80px'
+          height={['120px', '120px', '80px']}
           shadows=''
           urlSvg='svg/s-8.svg'
         />
@@ -58,7 +64,7 @@ const ContentViewTop = (props) => {
       <Flex width={1} mt='20px' flex='auto' sx={{ position: 'relative' }}>
         <Flex
           width='60px'
-          height='120px'
+          height={['200px', '250px', '120px']}
           flex='auto'
           justifyContent='center'
           alignItems='center'
@@ -87,7 +93,7 @@ const ContentViewTop = (props) => {
           title='Fountain'
           subTitle='of Varnoth'
           backgroundImage='/image/fd-4.png'
-          height='120px'
+          height={['200px', '250px', '120px']}
           shadows=''
           urlSvg='svg/s-8.svg'
         />

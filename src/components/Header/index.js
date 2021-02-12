@@ -9,7 +9,7 @@ const Layout = (props) => {
       px={5}
       mt={3}
       flex='none'
-      justifyContent='flex-end'
+      justifyContent={['center', 'flex-end']}
       sx={{
         boxSizing: 'border-box'
       }}

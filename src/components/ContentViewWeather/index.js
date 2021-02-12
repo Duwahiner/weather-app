@@ -4,7 +4,13 @@ import { Container } from './styles'
 
 const ContentViewWeather = (props) => {
   return (
-    <Container width={1} px={2} flexDirection='column' mt={['-110px']}>
+    <Container
+      minWidth='260px'
+      maxWidth={['auto', '480px', '100%']}
+      width={1} px={2}
+      flexDirection='column'
+      mt={['0px', '0px', '-110px']}
+    >
       <ItemsWeather
         degreeNumber='29'
         degree='°C'

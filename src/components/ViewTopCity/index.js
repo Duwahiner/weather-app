@@ -7,16 +7,42 @@ const ViewTopCity = (props) => {
   const theme = useTheme()
 
   return (
-    <Container width={1} flexDirection='column' justifyContent='center'>
-      <Flex width={1} px='40px' pt='40px' pb='30px' flex='auto'>
-        <Background flex='atuo' width={1} height='100%' alignItems='center'>
-          <Flex ml='90px' flexDirection='column' justifySelf='center' height='180px'>
-            <Flex alignItems='center'>
+    <Container
+      width={1} flexDirection='column'
+      justifyContent='center'
+    >
+      <Flex
+        width={1}
+        px={['10px', '40px']}
+        pt={['10px', '40px']}
+        pb='30px' flex='auto'
+      >
+        <Background
+          flex='atuo'
+          width={1} height='100%'
+          alignItems='center'
+        >
+          <Flex
+            width={[1]}
+            ml={['25px', '0px', '90px']}
+            flexDirection='column'
+            justifyContent='center'
+            alignItems={['center', 'flex-start', 'flex-start']}
+            height='180px'
+          >
+            <Flex
+              width={[1]}
+              lignItems='center'
+              justifyContent={['center', 'flex-start', 'flex-start']}
+            >
               <Box width='20px' height='20px' mr={2}>
                 <ReactSVG src='svg/s-9.svg' />
               </Box>
               <Box>
-                <Text color={theme.colors.secondary} fontSize='20px' fontFamily='RobotoBold'>
+                <Text
+                  color={theme.colors.secondary}
+                  fontSize='20px' fontFamily='RobotoBold'
+                >
                   Bogotá
                 </Text>
               </Box>
@@ -44,17 +70,34 @@ const ViewTopCity = (props) => {
           <Box width='70px' height='auto'>
             <ReactSVG src='svg/s-5.svg' />
           </Box>
-          <Box ml='5px' mt='-12px'> <Text fontSize='12px'> Cloudy </Text> </Box>
+          <Box ml='5px' mt='-12px'>
+            <Text fontSize='12px'>
+              Cloudy
+            </Text>
+          </Box>
         </Flex>
-        <Flex width={1} height='90px' justifyContent='center' alignItems='center'>
+        <Flex
+          width={1}
+          height='90px'
+          justifyContent='center'
+          alignItems='center'
+        >
           <Box>
-            <Text fontFamily='RobotoBold' color={theme.colors.container} fontSize='50px'>
+            <Text
+              fontFamily='RobotoBold'
+              color={theme.colors.container}
+              fontSize='50px'
+            >
               31
             </Text>
           </Box>
 
           <Box mt='-20px'>
-            <Text fontFamily='RobotoBold' color={theme.colors.container} fontSize='15px'>
+            <Text
+              fontFamily='RobotoBold'
+              color={theme.colors.container}
+              fontSize='15px'
+            >
               °C
             </Text>
           </Box>
