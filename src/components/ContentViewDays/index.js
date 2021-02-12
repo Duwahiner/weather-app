@@ -1,10 +1,38 @@
 import { useTheme } from '@emotion/react'
+import moment from 'moment'
+import { useSelector } from 'react-redux'
 import { Box, Flex } from 'rebass'
+import { getIcon } from '../../config'
 import ItemsDays from '../ItemsDays'
 import { Container, Text } from './styles'
 
 const ContentViewDays = (props) => {
   const theme = useTheme()
+  const { forecast } = useSelector(state => state.data)
+  const day1 = moment(forecast?.day1.dt_txt).format('LLLL').split(',')[0]
+  const day2 = moment(forecast?.day2.dt_txt).format('LLLL').split(',')[0]
+  const day3 = moment(forecast?.day3.dt_txt).format('LLLL').split(',')[0]
+
+  const degrees1 =
+  forecast
+    ? `${forecast?.day1.main.temp_max.toString().slice(0, 2)}° /
+      ${forecast?.day1.main.temp_min.toString().slice(0, 2)}°'
+      `
+    : ''
+
+  const degrees2 =
+  forecast
+    ? `${forecast?.day2.main.temp_max.toString().slice(0, 2)}° /
+      ${forecast?.day2.main.temp_min.toString().slice(0, 2)}°
+      `
+    : ''
+
+  const degrees3 =
+  forecast
+    ? `${forecast?.day3.main.temp_max.toString().slice(0, 2)}° /
+      ${forecast?.day3.main.temp_min.toString().slice(0, 2)}°
+      `
+    : ''
 
   return (
     <Container
@@ -36,22 +64,22 @@ const ContentViewDays = (props) => {
       </Flex>
 
       <ItemsDays
-        title='Friday'
-        subTitle='Rain'
-        degrees='32° / 23°'
-        urlSvg='svg/s-1.svg'
+        title={day1}
+        subTitle={forecast?.day1.weather[0].main}
+        urlSvg={getIcon(forecast?.day1.weather[0].main) || ''}
+        degrees={degrees1}
       />
       <ItemsDays
-        title='Saturday'
-        subTitle='Clear'
-        degrees='32° / 23°'
-        urlSvg='svg/s-4.svg'
+        title={day2}
+        subTitle={forecast?.day2.weather[0].main}
+        urlSvg={getIcon(forecast?.day2.weather[0].main) || ''}
+        degrees={degrees2}
       />
       <ItemsDays
-        title='Sunnday'
-        subTitle='Cloudy'
-        degrees='32° / 23°'
-        urlSvg='svg/s-2.svg'
+        title={day3}
+        subTitle={forecast?.day3.weather[0].main}
+        urlSvg={getIcon(forecast?.day3.weather[0].main) || ''}
+        degrees={degrees3}
       />
     </Container>
   )

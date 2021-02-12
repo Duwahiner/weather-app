@@ -1,10 +1,14 @@
 import { useTheme } from '@emotion/react'
 import { Box, Flex } from 'rebass'
 import { ReactSVG } from 'react-svg'
+import { useSelector } from 'react-redux'
 import { Background, Container, WeatherIcon, Text } from './styles'
+import { getIcon } from '../../config'
 
 const ViewTopCity = (props) => {
   const theme = useTheme()
+  const { bogotaColombia } = useSelector(state => state.data)
+  console.log(bogotaColombia)
 
   return (
     <Container
@@ -43,7 +47,7 @@ const ViewTopCity = (props) => {
                   color={theme.colors.secondary}
                   fontSize='20px' fontFamily='RobotoBold'
                 >
-                  Bogotá
+                  {bogotaColombia?.name}
                 </Text>
               </Box>
             </Flex>
@@ -68,11 +72,11 @@ const ViewTopCity = (props) => {
           }}
         >
           <Box width='70px' height='auto'>
-            <ReactSVG src='svg/s-5.svg' />
+            <ReactSVG src={getIcon(bogotaColombia?.weather[0].main) || ''} />
           </Box>
           <Box ml='5px' mt='-12px'>
             <Text fontSize='12px'>
-              Cloudy
+              {bogotaColombia?.weather[0].main}
             </Text>
           </Box>
         </Flex>
@@ -88,7 +92,7 @@ const ViewTopCity = (props) => {
               color={theme.colors.container}
               fontSize='50px'
             >
-              31
+              {bogotaColombia?.main.temp_max}
             </Text>
           </Box>
 

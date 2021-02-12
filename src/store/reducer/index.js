@@ -1,7 +1,7 @@
 import { consts } from '../../const'
 
 const initialState = {
-  data: {},
+  data: {}
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -11,7 +11,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         ...state,
         data: payload
       }
-      
+
     default:
       return state
   }

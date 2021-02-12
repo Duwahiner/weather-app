@@ -1,12 +1,12 @@
 import { consts } from '../const'
 
-const getInitAppWeather = (movies) => {
+const getInitAppWeather = (data) => {
   return {
     type: consts.GET_INIT_APP_WEATHER,
-    payload: movies
+    payload: data
   }
 }
 
 export const actions = {
-  getInitAppWeather,
+  getInitAppWeather
 }

@@ -1,8 +1,12 @@
+import { useSelector } from 'react-redux'
+import { getIcon } from '../../config'
 import ItemsWeather from '../ItemsWeather'
 import ItemsWeatherAdd from '../ItemsWeatherAdd'
 import { Container } from './styles'
 
 const ContentViewWeather = (props) => {
+  const { parisFrance, liyoFrance } = useSelector(state => state.data)
+
   return (
     <Container
       minWidth='260px'
@@ -12,25 +16,29 @@ const ContentViewWeather = (props) => {
       mt={['0px', '0px', '-110px']}
     >
       <ItemsWeather
-        degreeNumber='29'
+        degreeNumber={
+          liyoFrance ? liyoFrance?.main.temp_max.toString().slice(0, 2) : ''
+        }
         degree='°C'
-        name='Liyon'
+        name='Lyon'
         subName='Francia'
-        urlSvg='svg/s-3.svg'
-        textItem1='Humidicity 60%'
+        urlSvg={getIcon(liyoFrance?.weather[0].main) || ''}
+        textItem1={'Humidicity ' + liyoFrance?.main.humidity + '%'}
         textItem2='Northwest'
-        textItem3='8.3mk/h'
+        textItem3={liyoFrance?.wind.speed + 'mk/h'}
       />
 
       <ItemsWeather
-        degreeNumber='12'
+        degreeNumber={
+          parisFrance ? parisFrance?.main.temp_max.toString().slice(0, 2) : ''
+        }
         degree='°C'
         name='Paris'
         subName='Francia'
-        urlSvg='svg/s-6.svg'
-        textItem1='Humidicity 60%'
+        urlSvg={getIcon(parisFrance?.weather[0].main) || ''}
+        textItem1={'Humidicity ' + parisFrance?.main.humidity + '%'}
         textItem2='Northwest'
-        textItem3='8.3mk/h'
+        textItem3={parisFrance?.wind.speed + 'mk/h'}
       />
 
       <ItemsWeatherAdd />
