@@ -17,7 +17,9 @@ const ContentViewWeather = (props) => {
     >
       <ItemsWeather
         degreeNumber={
-          liyoFrance ? liyoFrance?.main.temp_max.toString().slice(0, 2) : ''
+          liyoFrance
+            ? liyoFrance?.main.temp_max.toString().slice(0, 2)
+            : ''
         }
         degree='°C'
         name='Lyon'
@@ -30,7 +32,9 @@ const ContentViewWeather = (props) => {
 
       <ItemsWeather
         degreeNumber={
-          parisFrance ? parisFrance?.main.temp_max.toString().slice(0, 2) : ''
+          parisFrance
+            ? parisFrance?.main.temp_max.toString().slice(0, 2)
+            : ''
         }
         degree='°C'
         name='Paris'

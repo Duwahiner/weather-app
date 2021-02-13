@@ -70,10 +70,10 @@ const ViewTopCity = (props) => {
             borderRadius: '0px 26px 26px 10px'
           }}
         >
-          <Box width='70px' height='auto'>
+          <Box width='70px' height='auto' mb='6px'>
             <ReactSVG src={getIcon(bogotaColombia?.weather[0].main) || ''} />
           </Box>
-          <Box ml='5px' mt='-12px'>
+          <Box ml='0px' mt='-12px'>
             <Text fontSize='12px'>
               {bogotaColombia?.weather[0].main}
             </Text>

@@ -1,5 +1,5 @@
 import { Global, css, ThemeProvider } from '@emotion/react'
-import { Provider  } from 'react-redux'
+import { Provider } from 'react-redux'
 import { Flex } from 'rebass'
 import theme from '../src/theme'
 import { store } from '../src/store'

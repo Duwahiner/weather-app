@@ -14,25 +14,25 @@ const ContentViewDays = (props) => {
   const day3 = moment(forecast?.day3.dt_txt).format('LLLL').split(',')[0]
 
   const degrees1 =
-  forecast
-    ? `${forecast?.day1.main.temp_max.toString().slice(0, 2)}° /
-      ${forecast?.day1.main.temp_min.toString().slice(0, 2)}°'
-      `
-    : ''
+    forecast
+      ? `${forecast?.day1.main.temp_max.toString().slice(0, 2)}° /
+        ${forecast?.day1.main.temp_min.toString().slice(0, 2)}°
+        `
+      : ''
 
   const degrees2 =
-  forecast
-    ? `${forecast?.day2.main.temp_max.toString().slice(0, 2)}° /
-      ${forecast?.day2.main.temp_min.toString().slice(0, 2)}°
-      `
-    : ''
+    forecast
+      ? `${forecast?.day2.main.temp_max.toString().slice(0, 2)}° /
+        ${forecast?.day2.main.temp_min.toString().slice(0, 2)}°
+        `
+      : ''
 
   const degrees3 =
-  forecast
-    ? `${forecast?.day3.main.temp_max.toString().slice(0, 2)}° /
-      ${forecast?.day3.main.temp_min.toString().slice(0, 2)}°
-      `
-    : ''
+    forecast
+      ? `${forecast?.day3.main.temp_max.toString().slice(0, 2)}° /
+        ${forecast?.day3.main.temp_min.toString().slice(0, 2)}°
+        `
+      : ''
 
   return (
     <Container

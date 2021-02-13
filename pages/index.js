@@ -15,6 +15,7 @@ const Home = (props) => {
     const bogotaForecast = await getWeatherForecast('bogota') || []
     const forecast = []
     const ignore = []
+    console.log(parisFrance)
 
     if ((Array.isArray(bogotaForecast.list))) {
       bogotaForecast.list.forEach((item) => {
@@ -29,6 +30,7 @@ const Home = (props) => {
       })
     }
 
+    console.log(bogotaForecast)
     const day1 = bogotaForecast.list.find((ele) => ele.dt_txt === forecast[0])
     const day2 = bogotaForecast.list.find((ele) => ele.dt_txt === forecast[1])
     const day3 = bogotaForecast.list.find((ele) => ele.dt_txt === forecast[2])
